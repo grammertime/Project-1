@@ -12,6 +12,7 @@
   padding: 1rem 2rem;
   background-color: #f8f9fa;
   border-bottom: 1px solid #e9ecef;
+  font-family: 'Carlito', sans-serif;
   /* border: 5px solid red; */
 }
 
@@ -36,11 +37,30 @@
   /* border: 5px solid blue; */
 }
 
+.shopping-cart-container {
+  display: flex;
+  justify-content: center;
+  height: 4 rem;
+}
+
+.shopping-cart-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+}
+
+.shopping-cart-icon i {
+  color: black;
+  font-size: 2rem;
+}
+
 h1 {
   font-size: 4rem;
   font-weight: 400;
   padding-bottom: 1rem;
   text-align: center;
+  font-family: 'Lilita One', sans-serif;
 }
 
 main {
@@ -53,6 +73,8 @@ main {
   height: 85vh;
   display: flex;
   flex-direction: column;
+  font-family: 'Carlito', sans-serif;
+  color: white;
   /* border: 5px solid red; */
 }
 
