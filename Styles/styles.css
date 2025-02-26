@@ -11,7 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: .25rem 2rem .25rem 2rem;
   background-color: #f8f9fa;
   border-bottom: 1px solid #e9ecef;
   font-family: 'Carlito', sans-serif;
@@ -19,12 +19,6 @@
 }
 
 .logo {
-  background: rgb(255, 0, 20);
-  background: radial-gradient(
-    circle,
-    rgba(255, 0, 20, 1) 0%,
-    rgba(230, 157, 112, 1) 63%
-  );
   padding: 1rem;
   border-radius: 1rem;
 }
@@ -36,6 +30,7 @@
   align-items: center;
   justify-content: space-around;
   color: #353238;
+  font-size: .75rem;
   /* border: 5px solid blue; */
 }
 
@@ -54,18 +49,10 @@
 
 .shopping-cart-icon i {
   color: black;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /* Main Product Page Styling */
-h1 {
-  font-size: 4rem;
-  font-weight: 400;
-  padding-bottom: 1rem;
-  text-align: center;
-  font-family: 'Lilita One', sans-serif;
-}
-
 main {
   background: rgb(230, 157, 112);
   background: linear-gradient(
@@ -73,10 +60,9 @@ main {
     rgba(230, 157, 112, 1) 30%,
     rgba(255, 0, 20, 0.9990589985994398) 100%
   );
-  height: 85vh;
+  height: 150vh;
   display: flex;
   flex-direction: column;
-  font-family: 'Carlito', sans-serif;
   color: white;
   /* border: 5px solid red; */
 }
@@ -86,7 +72,9 @@ main {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  padding: 2rem;
+  flex-direction: row;
+  padding: 15rem;
+  padding-top: 7rem;
   gap: 2rem;
   /* border: 5px solid purple; */
 }
@@ -94,8 +82,9 @@ main {
 /* Product image */
 .product-img-card {
   background-color: white;
-  border-radius: 1rem;
+  border-radius: .5rem;
   padding: 2rem;
+  box-shadow: black 0px 0px 10px;
   /* border: 5px solid greenyellow; */
 }
 
@@ -120,48 +109,88 @@ main {
 
 .price-card {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  width: 50%;
-  border-color: 20px solid yellow;
+  width: 100%;
+  padding: 0rem 0rem 0rem .6rem;
 
   button {
-    background-color: #81667a;
-    border: 1px solid #81667a;
-    border-radius: 1rem;
-    padding: 1rem;
+    /* background-color: #81667a;
+    border: 1px solid #81667a; */
+    background-color: #ED221F;
+    border: 1px solid #ED221F;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    padding: .5rem;
     color: white;
-    font-size: 1rem;
+    font-size: .88rem;
     font-weight: 400;
     cursor: pointer;
+    box-shadow: black 0px 0px 2px;
   }
+}
+
+.add-to-cart-icon {
+  display: flex;
+  justify-content: center;
+  width: 2rem;
+}
+
+.add-to-cart-icon i {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .description-card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 1rem;
   padding-bottom: 1rem;
   flex-wrap: wrap;
   text-align: center;
-  width: 50%;
+  width: 100%;
   /* border: 5px solid blue; */
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 150;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-family: 'Domine', sans-serif;
+}
+
+p {
+  font-size: 1rem;
+  text-align: left;
+  font-family: 'Domine', italic;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Domine', sans-serif;
 }
 
 /* Quantity Selector with cards of options for quantity */
 .quantity-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100%;
   align-items: center;
   gap: 1rem;
   /* border: 5px solid green; */
 }
 
-.quantity-selector-card {
+.quantity-selector-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -172,12 +201,25 @@ main {
 
 #pack-of-6 {
   background-color: white;
-  border-radius: 1rem;
-  padding: 2rem;
+  border-radius: .5rem;
+  padding: 1rem;
 }
 
 #pack-of-24 {
   background-color: white;
-  border-radius: 1rem;
-  padding: 2rem;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+/* Footer Section */
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  font-family: 'Carlito', sans-serif;
+  /* border: 5px solid red; */
 }

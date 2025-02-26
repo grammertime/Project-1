@@ -9,7 +9,7 @@
     <!-- Initializing Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Domine:wght@400..700&family=Lilita+One&display=swap" rel="stylesheet">
 
     <!-- Initializing Font Awesome -->
     <script src="https://kit.fontawesome.com/abb2e2c90b.js" crossorigin="anonymous"></script>
@@ -49,32 +49,43 @@
                 <div class="product-info-card">
                     <div class="description-card">
                         <h1>Happy Cola</h1>
-                        <p>Haribo Happy Cola is a popular retro sweet that is loved by all ages. These cola bottle shaped sweets are a classic and a great addition to any pick and mix selection.</p>
+                        <p>A retro choice that packs a burst of flavor.</p>
                     </div>
-                    <div class="price-card">
-                        <h4>Price: $1.99</h4>
-                        <button>Add to Cart</button>
-                    </div>
+                </div>
+                <!-- Price Container and add to cart -->
+                <div class="price-card">
+                    <h4>Price: $1.99</h4>
+                    <button>Add to Cart<div class="add-to-cart-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                    </button>
                 </div>
                 <!-- Quantity Selector with cards of options for quantity -->
                 <div class="quantity-container">
-                    <h3>Quantity</h3>
-                    <div class="quantity-selector-card">
-                        <!-- <h3>Quantity</h3>
-                        <div class="quantity-selector">
-                            <button>-</button>
-                            <input type="text" value="1">
-                            <button>+</button>
-                        </div> -->
+                    <h4>Quantity</h4>
+                    <div class="quantity-selector-container">
                         <div id="pack-of-6">
                             <img src="./Images/pack-of-6.png" alt="Six Pack of Gummies" width=200px height=auto>
                         </div>
                         <div id="pack-of-24">
                             <img src="./Images/pack-of-24.png" alt="24 Pack of Gummies" width=100px height=auto>
                         </div>
+                    </div>
                 </div>
             </section>
         </section>
     </main>
+
+    <!-- Footer Section -->
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./Images/Haribo-logo.png" alt="Haribo Logo" width=150px height=50px>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Haribo. All Rights Reserved.</p>
+            </div>
+            <div class="footer-mascot">
+                <img src="./Images/haribo-bear.png" alt="Haribo Bear" width=40px height=auto>
+            </div>
+        </div>
 </body>
 </html>
