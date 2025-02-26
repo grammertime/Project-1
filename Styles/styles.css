@@ -1,9 +1,11 @@
+/* Styling for entire page */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Header Styling */
 .header {
   display: flex;
   flex-direction: row;
@@ -55,6 +57,7 @@
   font-size: 2rem;
 }
 
+/* Main Product Page Styling */
 h1 {
   font-size: 4rem;
   font-weight: 400;
@@ -78,6 +81,7 @@ main {
   /* border: 5px solid red; */
 }
 
+/* Overall container for all product page content */
 .card-container {
   display: flex;
   flex-wrap: nowrap;
@@ -87,6 +91,7 @@ main {
   /* border: 5px solid purple; */
 }
 
+/* Product image */
 .product-img-card {
   background-color: white;
   border-radius: 1rem;
@@ -94,6 +99,7 @@ main {
   /* border: 5px solid greenyellow; */
 }
 
+/* Product information, quantity, and options */
 .interactive-container {
   display: flex;
   flex-direction: column;
@@ -145,6 +151,7 @@ main {
   /* border: 5px solid blue; */
 }
 
+/* Quantity Selector with cards of options for quantity */
 .quantity-container {
   display: flex;
   flex-direction: column;
