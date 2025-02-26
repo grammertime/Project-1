@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Lilita+One&display=swap">
+    <style>
+        header {
+            font-family: 'Carlito', sans-serif;
+        }
+        main {
+            font-family: 'Carlito', sans-serif;
+            color: white;
+        }
+        h1 {
+            font-family: 'Lilita One', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="./Images/Haribo-logo.png" alt="Haribo Logo" width=150px height=50px>
+        </div>
+        <div class="nav-bar">
+            <h2>Products</h2>
+            <h2>About Us</h2>
+            <h2>Contact</h2>
+            <div class="shopping-cart-icon">
+                <img src="./Images/cart-shopping-solid.svg" alt="Shopping Cart" width=30px height=auto>
+            </div>
+            <div class="mascot-icon">
+                <img src="./Images/haribo-bear.png" alt="Haribo Bear" width=40px height=auto>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card-container">
+            <div class="product-img-card">
+                <img src="./Images/happy-cola.png" alt="Haribo Gold Bears" width=350px height=auto>
+            </div>
+            <section class="interactive-container">
+                <div class="product-info-card">
+                    <div class="description-card">
+                        <h1>Happy Cola</h1>
+                        <p>Haribo Happy Cola is a popular retro sweet that is loved by all ages. These cola bottle shaped sweets are a classic and a great addition to any pick and mix selection.</p>
+                    </div>
+                    <div class="price-card">
+                        <h4>Price: $1.99</h4>
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+                <div class="quantity-container">
+                    <h3>Quantity</h3>
+                    <div class="quantity-selector-card">
+                        <!-- <h3>Quantity</h3>
+                        <div class="quantity-selector">
+                            <button>-</button>
+                            <input type="text" value="1">
+                            <button>+</button>
+                        </div> -->
+                        <div id="pack-of-6">
+                            <img src="./Images/pack-of-6.png" alt="Six Pack of Gummies" width=200px height=auto>
+                        </div>
+                        <div id="pack-of-24">
+                            <img src="./Images/pack-of-24.png" alt="24 Pack of Gummies" width=100px height=auto>
+                        </div>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
