@@ -34,6 +34,16 @@
   /* border: 5px solid blue; */
 }
 
+/* Asked Copilot how to format these a tags because I forgot how to simply remove decorations of blue color and underline. This is what it gave me. */
+.nav-bar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-bar a:hover {
+  color: inherit;
+}
+
 .shopping-cart-container {
   display: flex;
   justify-content: center;
@@ -54,6 +64,7 @@
 
 /* Main Product Page Styling */
 main {
+  /* Used https://cssgradient.io/ for this gradient background, part of the required tasks for use of UTD Presentation application */
   background: rgb(230, 157, 112);
   background: linear-gradient(
     166deg,
