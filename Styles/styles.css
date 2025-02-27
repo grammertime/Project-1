@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+/* Smooth scrolling so when you click to go back to the top, it is smooth instead of immediate */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Header Styling */
 .header {
   display: flex;
@@ -65,6 +70,10 @@
 .shopping-cart-icon i {
   color: black;
   font-size: 1.5rem;
+}
+
+.shopping-cart-icon i:hover {
+  transform: scale(1.1);
 }
 
 /* Main Product Page Styling */
@@ -153,6 +162,15 @@ img:hover {
   /* border: 5px solid blue; */
 }
 
+.review-price-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* border: 5px solid yellow; */
+}
+
 .price-card {
   display: flex;
   flex-direction: row;
@@ -187,6 +205,16 @@ img:hover {
   }
 }
 
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  /* border: 5px solid green; */
+}
+
 .add-to-cart-icon {
   display: flex;
   justify-content: center;
@@ -203,19 +231,19 @@ h1 {
   font-weight: 150;
   padding-bottom: 1rem;
   text-align: center;
-  font-family: 'Domine', sans-serif;
+  font-family: 'Carlito', sans-serif;
 }
 
 p {
   font-size: 1rem;
   text-align: left;
-  font-family: 'Domine', italic;
+  font-family: 'Carlito', italic;
 }
 
 h4 {
   font-size: 1rem;
   font-weight: 500;
-  font-family: 'Domine', sans-serif;
+  font-family: 'Carlito', sans-serif;
 }
 
 /* Quantity Selector with cards of options for quantity */
@@ -277,6 +305,7 @@ h4 {
   align-items: center;
   padding: 2rem;
   gap: 2rem;
+  font-family: 'Carlito', sans-serif;
   /* border: 5px solid yellow; */
 }
 
@@ -290,6 +319,7 @@ h4 {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  box-shadow: black 0px 0px 4px 0px;
   /* border: 5px solid purple; */
 
   img {
@@ -305,6 +335,7 @@ h4 {
   align-items: center;
   padding: 2rem;
   gap: 2rem;
+  font-family: 'Carlito', sans-serif;
   /* border: 5px solid yellow; */
 }
 
@@ -318,6 +349,7 @@ h4 {
   padding: 1rem;
   margin: 0 auto;
   width: fit-content;
+  box-shadow: black 0px 0px 4px 0px;
   /* border: 5px solid purple; */
 
   img {
@@ -347,4 +379,20 @@ h4 {
     width: 100px;
     height: auto;
   }
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.scroll-to-top i {
+  font-size: 2.3rem;
+  color: black;
+  cursor: pointer;
+}
+
+.scroll-to-top i:hover {
+  transform: scale(1.1);
 }

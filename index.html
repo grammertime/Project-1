@@ -28,6 +28,7 @@
             <a href="./index.html"><h2>Contact</h2></a>
             <div class="shopping-cart-container">
                 <a href="./index.html"><div class="shopping-cart-icon">
+                    <!-- Using Font Awesome shopping-cart as main shopping cart -->
                     <i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
             </div>
@@ -54,10 +55,24 @@
                     </div>
                 </div>
                 <!-- Price Container and add to cart -->
-                <div class="price-card">
-                    <h4>Price: $1.99</h4>
-                    <button>Add to Cart<div class="add-to-cart-icon"><i class="fa-solid fa-cart-shopping"></i></div>
-                    </button>
+                <div class="review-price-card">
+                    <div class="price-card">
+                        <h4>Price: $1.99</h4>
+                        <!-- Using Font Awesome add-to-cart icon as the shopping cart to add to cart -->
+                        <button>Add to Cart<div class="add-to-cart-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </button>
+                    </div>
+                    <div class="reviews-card">
+                        <h4>Reviews:</h4>
+                        <div class="review-container">
+                            <!-- Using Font Awesome classic solid star icons and empty star icons as the stars for the reviews -->
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                    </div>
                 </div>
                 <!-- Quantity Selector with cards of options for quantity -->
                 <div class="quantity-container">
@@ -81,7 +96,7 @@
         </section>
         <!-- Suggested Products section -->
         <section class="related-products-section">
-            <h2>Customers who bought these also bought</h2>
+            <h2>Customers who bought these also bought:</h2>
             <div class="related-products-container">
                 <img src="./Images/goldbears-clip.png" alt="Goldbears">
                 <img src="./Images/twin-snakes-clip.png" alt="Twin Snakes">
@@ -101,7 +116,7 @@
     </main>
 
     <!-- Footer Section -->
-     <footer class="footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="copyright">
                 <p>&copy; 2025 Haribo. All Rights Reserved.</p>
@@ -113,5 +128,9 @@
                 <img src="./Images/haribo-bear.png" alt="Haribo Bear" width=40px height=auto>
             </div>
         </div>
+    </footer>
+    <div class="scroll-to-top">
+        <a href="#top"><i class="fa-regular fa-circle-up"></i></a>
+    </div>
 </body>
 </html>
