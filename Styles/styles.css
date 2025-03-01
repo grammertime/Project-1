@@ -23,17 +23,6 @@ html, body {
   scroll-behavior: smooth;
 }
 
-/* Formatting logo that my gf designed */
-.logo {
-  padding: 0rem;
-  width: fit-content;
-
-  img {
-    width: 100px;
-    height: auto;
-  }
-}
-
 /* Adding font-family in CSS because I couldn't figure out how to use variables in tailwind. Adding hover property on the h2 navigation tabs */
 .header {
   font-family: var(--font-family);
