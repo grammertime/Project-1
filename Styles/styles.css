@@ -134,9 +134,7 @@ img:hover {
 
   button:hover {
     box-shadow: black 0px 0px 5px;
-    .add-to-cart-icon i {
-      transform: var(--transform-scale);
-    }
+    transform: var(--transform-scale);
   }
 }
 
