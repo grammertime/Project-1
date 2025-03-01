@@ -1,27 +1,32 @@
-/* Styling for entire page */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Setting up CSS Variables */
+:root {
+  --font-family: 'Carlito', sans-serif;
+  --font-family-italic: 'Carlito', italic;
+  --main-font-color: white;
+  --accent-color: black;
+  --button-color: #ED221F;
+  --box-shadow-light: black 0px 0px 4px 0px;
+  --transition-property: transform 0.3s ease-in-out;
+  --transform-scale: scale(1.1);
+  --med-rounded-corner: 1rem;
+  --small-rounded-corner: .5rem;
+  --large-rounded-corner: 2rem;
 }
 
 /* Smooth scrolling so when you click to go back to the top, it is smooth instead of immediate */
-html {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   scroll-behavior: smooth;
 }
 
-/* Header Styling */
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: .25rem 2rem .25rem 2rem;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
-  font-family: 'Carlito', sans-serif;
-  /* border: 5px solid red; */
+main {
+  flex: 1; /* This pushes the footer to the bottom */
 }
+
 
 .logo {
   padding: 0rem;
@@ -33,15 +38,12 @@ html {
   }
 }
 
-.nav-bar {
-  display: flex;
-  gap: 5rem;
-  padding: 1rem;
-  align-items: center;
-  justify-content: space-around;
-  color: #353238;
-  font-size: .75rem;
-  /* border: 5px solid blue; */
+.header {
+  font-family: var(--font-family);
+
+  h2:hover {
+    transform: var(--transform-scale);
+  }
 }
 
 /* Asked Copilot how to format these a tags because I forgot how to simply remove decorations of blue color and underline. This is what it gave me. */
@@ -57,7 +59,7 @@ html {
 .shopping-cart-container {
   display: flex;
   justify-content: center;
-  height: 4 rem;
+  height: 4rem;
 }
 
 .shopping-cart-icon {
@@ -68,57 +70,33 @@ html {
 }
 
 .shopping-cart-icon i {
-  color: black;
+  color: var(--accent-color);
   font-size: 1.5rem;
 }
 
 .shopping-cart-icon i:hover {
-  transform: scale(1.1);
+  transform: var(--transform-scale);
 }
 
 /* Main Product Page Styling */
 main {
-  /* Used https://cssgradient.io/ for this gradient background, part of the required tasks for use of UTD Presentation application */
-  background: rgb(230, 157, 112);
-  background: linear-gradient(
-    166deg,
-    rgba(230, 157, 112, 1) 30%,
-    rgba(255, 0, 20, 0.9990589985994398) 100%
-  );
-  height: 175vh;
-  display: flex;
-  flex-direction: column;
-  color: white;
-  /* border: 5px solid red; */
+  color: var(--main-font-color);
 }
 
 /* Asked ChatGPT to help me with some CSS code that would allow the image to zoom in a bit when the user hovers over the image. I am applying this code to all images in the page to allow for more user interactivity. */
 img {
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+  transition: var(--transition-property);
 }
 
 img:hover {
-  transform: scale(1.1);
-}
-
-/* Overall container for all happy cola product content */
-.card-container {
-  display: flex;
-  height: 46%;
-  flex-wrap: nowrap;
-  justify-content: center;
-  flex-direction: row;
-  padding: 10rem;
-  padding-top: 7rem;
-  gap: 2rem;
-  /* border: 5px solid purple; */
+  transform: var(--transform-scale);
 }
 
 /* Product image */
 .product-img-card {
-  background-color: white;
-  border-radius: .5rem;
+  background-color: var(--main-font-color);
+  border-radius: var(--small-rounded-corner);
   padding: 2rem;
   box-shadow: black 0px 0px 10px;
   /* border: 5px solid greenyellow; */
@@ -128,47 +106,6 @@ img:hover {
     width: 100%;
     height: 100%;
   }
-}
-
-/* Product information, quantity, and options */
-.interactive-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1rem;
-  width: 40%;
-  /* border: 5px solid black; */
-}
-
-.product-info-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center space-around;
-  width: 100%;
-  /* border: 5px solid hotpink; */
-}
-
-.description-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  /* padding-top: 1rem;
-  padding-bottom: 1rem; */
-  flex-wrap: wrap;
-  text-align: center;
-  width: 100%;
-  /* border: 5px solid blue; */
-}
-
-.review-price-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  /* border: 5px solid yellow; */
 }
 
 .price-card {
@@ -181,9 +118,9 @@ img:hover {
   button {
     /* background-color: #81667a;
     border: 1px solid #81667a; */
-    background-color: #ED221F;
-    border: 1px solid #ED221F;
-    border-radius: 2rem;
+    background-color: var(--button-color);
+    border: 1px solid var(--button-color);
+    border-radius: var(--large-rounded-corner);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -191,7 +128,7 @@ img:hover {
     margin: 1rem;
     gap: .5rem;
     padding: .5rem;
-    color: white;
+    color: var(--main-font-color);
     font-size: .88rem;
     font-weight: 400;
     cursor: pointer;
@@ -200,19 +137,9 @@ img:hover {
 
   button:hover {
     .add-to-cart-icon i {
-      transform: scale(1.1);
+      transform: var(--transform-scale);
     }
   }
-}
-
-.reviews-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  gap: 1rem;
-  /* border: 5px solid green; */
 }
 
 .add-to-cart-icon {
@@ -222,49 +149,31 @@ img:hover {
 }
 
 .add-to-cart-icon i {
-  color: white;
+  color: var(--main-font-color);
   font-size: 1.5rem;
 }
 
-h1 {
-  font-size: 2rem;
+h2 {
+  font-size: 1rem;
   font-weight: 150;
-  padding-bottom: 1rem;
-  text-align: center;
-  font-family: 'Carlito', sans-serif;
+  align-self: center;
+  font-family: var(--font-family);
+}
+
+h1 {
+  font-family: var(--font-family);
 }
 
 p {
   font-size: 1rem;
   text-align: left;
-  font-family: 'Carlito', italic;
+  font-family: var(--font-family-italic);
 }
 
 h4 {
   font-size: 1rem;
   font-weight: 500;
-  font-family: 'Carlito', sans-serif;
-}
-
-/* Quantity Selector with cards of options for quantity */
-.quantity-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 1rem;
-  flex-wrap: wrap;
-  /* border: 5px solid green; */
-}
-
-.quantity-selector-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem;
-  /* border: 5px solid red; */
+  font-family: var(--font-family);
 }
 
 #pack-of-3, #pack-of-6, #pack-of-24 {
@@ -275,9 +184,9 @@ h4 {
   gap: .5rem;
   padding: 1rem;
   cursor: pointer;
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: black 0px 0px 4px 0px;
+  background-color: var(--main-font-color);
+  border-radius: var(--med-rounded-corner);
+  box-shadow: var(--box-shadow-light);
 
   img {
     object-fit: contain;
@@ -288,38 +197,30 @@ h4 {
   p {
     font-size: .75rem;
     font-weight: 500;
-    color: black;
+    color: var(--accent-color);
   }
 }
 
 #pack-of-3:hover, #pack-of-6:hover, #pack-of-24:hover {
   box-shadow: black 0px 0px 5px;
-  color: white;
+  color: var(--main-font-color);
 }
 
-/* Suggested Products Section */
 .related-products-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  gap: 2rem;
-  font-family: 'Carlito', sans-serif;
-  /* border: 5px solid yellow; */
+  font-family: var(--font-family);
 }
 
 .related-products-container {
   display: flex;
-  background-color: white;
+  background-color: var(--main-font-color);
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: var(--med-rounded-corner);
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
-  box-shadow: black 0px 0px 4px 0px;
+  box-shadow: var(--box-shadow-light);
   /* border: 5px solid purple; */
 
   img {
@@ -329,27 +230,20 @@ h4 {
 }
 
 .limited-edition-product {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  gap: 2rem;
-  font-family: 'Carlito', sans-serif;
-  /* border: 5px solid yellow; */
+  font-family: var(--font-family);
 }
 
 .limited-edition-product-container {
   display: flex;
-  background-color: white;
-  border-radius: 1rem;
+  background-color: var(--main-font-color);
+  border-radius: var(--med-rounded-corner);
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   padding: 1rem;
   margin: 0 auto;
   width: fit-content;
-  box-shadow: black 0px 0px 4px 0px;
+  box-shadow: var(--box-shadow-light);
   /* border: 5px solid purple; */
 
   img {
@@ -358,17 +252,41 @@ h4 {
   }
 }
 
-/* Footer Section */
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
-  font-family: 'Carlito', sans-serif;
-  /* border: 5px solid red; */
+.contact-form-container {
+  font-family: var(--font-family);
+
+  button {
+    background-color: var(--button-color);
+    border: 1px solid var(--button-color);
+    border-radius: var(--large-rounded-corner);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin: 1rem;
+    gap: .5rem;
+    padding: .5rem;
+    color: var(--main-font-color);
+    font-size: .88rem;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: black 0px 0px 2px;
+  }
+
+  button:hover {
+    box-shadow: black 0px 0px 5px;
+  }
+}
+
+.scroll-to-top i {
+  font-size: 2.3rem;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.scroll-to-top i:hover {
+  transform: var(--transform-scale);
 }
 
 .footer-logo {
@@ -381,18 +299,6 @@ h4 {
   }
 }
 
-.scroll-to-top {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-}
-
-.scroll-to-top i {
-  font-size: 2.3rem;
-  color: black;
-  cursor: pointer;
-}
-
-.scroll-to-top i:hover {
-  transform: scale(1.1);
+.footer-content {
+  font-family: var(--font-family);
 }

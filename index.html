@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 1</title>
     <link rel="stylesheet" href="./Styles/styles.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
     <!-- Initializing Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,17 +19,17 @@
 
 <body>
     <!-- Header Section -->
-    <header class="header">
+    <header class="header sticky top-0 flex flex-row justify-between items-center px-8 py-[.25rem] bg-[#f8f9fa] [border-bottom:1px_solid_#e9ecef]">
         <div class="logo">
             <a href="./index.html"><img src="./Images/Haribo-logo.png" alt="Haribo Logo"></a>
         </div>
-        <div class="nav-bar">
+        <div class="nav-bar flex gap-20 p-4 items-center justify-around text-[#353238] text-[.75rem]">
             <!-- Couldn't figure out how I wanted this section, because I wanted to use a nav tag, but I couldn't figure out how to use it with the flexbox formatting. So I asked Copilot "Can I add a hrefs to the h2 tags in the nav-bar div?" and it provided me with this as an option. -->
             <a href="./index.html"><h2>Products</h2></a>
             <a href="./index.html"><h2>About Us</h2></a>
             <a href="./index.html"><h2>Contact</h2></a>
-            <div class="shopping-cart-container">
-                <a href="./index.html"><div class="shopping-cart-icon">
+            <div class="shopping-cart-container flex justify-center h-16">
+                <a href="./index.html"><div class="shopping-cart-icon flex justify-center items-center w-8">
                     <!-- Using Font Awesome shopping-cart as main shopping cart -->
                     <i class="fa-solid fa-cart-shopping"></i></a>
                 </div>
@@ -39,30 +41,30 @@
     </header>
 
     <!-- Main Product Page Content -->
-    <main>
+    <main class="bg-[linear-gradient(_166deg,_rgba(230,_157,_112,_1)_30%,_rgba(255,_0,_20,_0.9990589985994398)_100%_)] h-[175vh] flex flex-col">
         <!-- Overall container for all product page content -->
-        <section class="card-container">
+        <section class="card-container flex h-[46%] flex-nowrap justify-center flex-row p-40 pt-28 gap-8">
             <!-- Product image -->
             <div class="product-img-card">
                 <img src="./Images/happy-cola.png" alt="Haribo Gold Bears" width=350px height=auto>
             </div>
             <!-- Product information, quantity, and options -->
-            <section class="interactive-container">
-                <div class="product-info-card">
-                    <div class="description-card">
-                        <h1>Happy Cola</h1>
+            <section class="interactive-container flex flex-col justify-start items-center gap-1 w-2/5">
+                <div class="product-info-card flex flex-row w-full">
+                    <div class="description-card flex flex-col justify-between items-start text-center w-full">
+                        <h1 class="text-[2rem] font-[150] text-center">Happy-Cola</h1>
                         <p>A familiar choice that packs a burst of cola-licious flavor.</p>
                     </div>
                 </div>
                 <!-- Price Container and add to cart -->
-                <div class="review-price-card">
+                <div class="review-price-card flex flex-row justify-center items-center w-full">
                     <div class="price-card">
                         <h4>Price: $1.99</h4>
                         <!-- Using Font Awesome add-to-cart icon as the shopping cart to add to cart -->
-                        <button>Add to Cart<div class="add-to-cart-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <button>Add to Cart<div class="add-to-cart-icon flex justify-center w-8"><i class="fa-solid fa-cart-shopping"></i></div>
                         </button>
                     </div>
-                    <div class="reviews-card">
+                    <div class="reviews-card flex flex-col justify-center items-center w-full gap-4">
                         <h4>Reviews:</h4>
                         <div class="review-container">
                             <!-- Using Font Awesome classic solid star icons and empty star icons as the stars for the reviews -->
@@ -75,9 +77,9 @@
                     </div>
                 </div>
                 <!-- Quantity Selector with cards of options for quantity -->
-                <div class="quantity-container">
+                <div class="quantity-container flex flex-col w-full gap-4 flex-wrap">
                     <h4>Choose your quantity:</h4>
-                    <div class="quantity-selector-container">
+                    <div class="quantity-selector-container flex flex-row justify-center items-center w-full flex-wrap gap-4">
                         <div id="pack-of-3">
                             <img src="./Images/pack-of-3.png" alt="3 Pack of Gummies" width=125px height=auto>
                             <p>3 Pack</p>
@@ -95,8 +97,8 @@
             </section>
         </section>
         <!-- Suggested Products section -->
-        <section class="related-products-section">
-            <h2>Customers who bought these also bought:</h2>
+        <section class="related-products-section flex flex-col justify-center items-center p-8 gap-8">
+            <h2>Customers who bought Happy-Cola also bought:</h2>
             <div class="related-products-container">
                 <img src="./Images/goldbears-clip.png" alt="Goldbears">
                 <img src="./Images/twin-snakes-clip.png" alt="Twin Snakes">
@@ -106,7 +108,7 @@
                 <img src="./Images/red-white-blue-clip.png" alt="Red, White, and Blue Gummis">
                 <img src="./Images/fizzy-cola-clip.png" alt="Fizzy Cola">
             </div>
-            <div class="limited-edition-product">
+            <div class="limited-edition-product flex flex-col justify-center items-center p-8 gap-8">
                 <h2>Also, don't wait! Check out our NEW limited edition FOOTBALL MIX while it's still football season!</h2>
                 <div class="limited-edition-product-container">
                     <img src="./Images/football-mix-clip.png" alt="Football Mix">
@@ -115,13 +117,70 @@
         </section>
     </main>
 
+    <!-- Looping Gummie Bear Video -->
+    <section class="video-container w-full flex flex-col justify-center items-center">
+        <video class="gummie-bear-video object-cover" width=100% height=auto loop muted autoplay>
+            <source src="./Images/gummy-bear-vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Contact Us Form -->
+    <section class="contact-form-container w-full flex flex-col justify-center items-center p-7 gap-8">
+        <h2>Contact Us</h2>
+        <p>Have a question or comment? Fill out the form below and we'll get back to you as soon as possible!</p>
+        <div class="contact-form-subcontainer flex flex-row gap-8">
+            <div class="contact-form w-max flex flex-col justify-center items-center">
+                <form action="#" method="post">
+                    <div class="full-name border-solid border-black">
+                        <label for="name">*Full Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="email border-1px-solid-black">
+                        <label for="email">*Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                
+                    <div class="phone border-1px-solid-black">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+
+                    <div class="message border-1px-solid-black">
+                        <label for="message">*Your Message:</label>
+                        <div class="message-content w-full">
+                            <textarea class="w-full" id="message" name="message" placeholder="Write your message here" rows="4"></textarea>
+                        </div>
+                    </div>
+                
+                    <div class="subscribe border-1px-solid-black">
+                        <label for="subscribe">
+                            <input type="checkbox" id="subscribe" name="subscribe"> Subscribe to our newsletter
+                        </label>
+                    </div>
+                
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <div class="animated-svg">
+                <dotlottie-player src="https://lottie.host/8acaf845-e119-4494-afbd-7bc623fd74be/cFt7bu4M6Y.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Scroll to top button -->
+    <div class="scroll-to-top fixed bottom-[40px] right-[40px]">
+        <a href="#top"><i class="fa-regular fa-circle-up"></i></a>
+    </div>
+
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
+    <footer class="footer bottom-0 w-full flex flex-row items-center bg-[#f8f9fa] [border-top:1px_solid_#e9ecef]">
+        <div class="footer-content flex flex-col justify-center items-center w-full px-8 py-4 bg-[#f8f9fa]">
             <div class="copyright">
                 <p>&copy; 2025 Haribo. All Rights Reserved.</p>
             </div>
-            <div class="footer-logo">
+            <div class="footer-logo mx-4 my-0">
                 <img src="./Images/Haribo-logo.png" alt="Haribo Logo" width=150px height=50px>
             </div>
             <div class="footer-mascot">
@@ -129,8 +188,5 @@
             </div>
         </div>
     </footer>
-    <div class="scroll-to-top">
-        <a href="#top"><i class="fa-regular fa-circle-up"></i></a>
-    </div>
 </body>
 </html>
