@@ -1,4 +1,4 @@
-/* Setting up CSS Variables */
+/* Setting up CSS Variables. I use these throughout the styles.css file. I couldn't figure out how to implement them in tailwind. */
 :root {
   --font-family: 'Carlito', sans-serif;
   --font-family-italic: 'Carlito', italic;
@@ -13,7 +13,7 @@
   --large-rounded-corner: 2rem;
 }
 
-/* Smooth scrolling so when you click to go back to the top, it is smooth instead of immediate */
+/* Setting up html and body elements, so that I can format easier. Smooth scrolling so when you click to go back to the top, it is smooth instead of immediate */
 html, body {
   height: 100%;
   margin: 0;
@@ -23,11 +23,7 @@ html, body {
   scroll-behavior: smooth;
 }
 
-main {
-  flex: 1; /* This pushes the footer to the bottom */
-}
-
-
+/* Formatting logo that my gf designed */
 .logo {
   padding: 0rem;
   width: fit-content;
@@ -38,6 +34,7 @@ main {
   }
 }
 
+/* Adding font-family in CSS because I couldn't figure out how to use variables in tailwind. Adding hover property on the h2 navigation tabs */
 .header {
   font-family: var(--font-family);
 
@@ -56,6 +53,7 @@ main {
   color: inherit;
 }
 
+/* Container for shopping-cart svg from font awesome */
 .shopping-cart-container {
   display: flex;
   justify-content: center;
@@ -69,6 +67,7 @@ main {
   width: 2rem;
 }
 
+/* Formatting shopping-cart svg */
 .shopping-cart-icon i {
   color: var(--accent-color);
   font-size: 1.5rem;
@@ -99,7 +98,6 @@ img:hover {
   border-radius: var(--small-rounded-corner);
   padding: 2rem;
   box-shadow: black 0px 0px 10px;
-  /* border: 5px solid greenyellow; */
   
   img {
     object-fit: contain;
@@ -108,6 +106,7 @@ img:hover {
   }
 }
 
+/* Formatting price card in description. Also formatting the button to have a box-shadow when hovered on. */
 .price-card {
   display: flex;
   flex-direction: row;
@@ -116,8 +115,6 @@ img:hover {
   width: 100%;
 
   button {
-    /* background-color: #81667a;
-    border: 1px solid #81667a; */
     background-color: var(--button-color);
     border: 1px solid var(--button-color);
     border-radius: var(--large-rounded-corner);
@@ -136,12 +133,14 @@ img:hover {
   }
 
   button:hover {
+    box-shadow: black 0px 0px 5px;
     .add-to-cart-icon i {
       transform: var(--transform-scale);
     }
   }
 }
 
+/* Formatting shopping-cart svg again for the add to cart button */
 .add-to-cart-icon {
   display: flex;
   justify-content: center;
@@ -153,6 +152,7 @@ img:hover {
   font-size: 1.5rem;
 }
 
+/* Formatting all h2s */
 h2 {
   font-size: 1rem;
   font-weight: 150;
@@ -160,22 +160,26 @@ h2 {
   font-family: var(--font-family);
 }
 
+/* Formatting all h1s */
 h1 {
   font-family: var(--font-family);
 }
 
+/* Formatting all ps. For some reason Carlito italic wasn't working for me on this page */
 p {
   font-size: 1rem;
   text-align: left;
   font-family: var(--font-family-italic);
 }
 
+/* Formatting all h4s */
 h4 {
   font-size: 1rem;
   font-weight: 500;
   font-family: var(--font-family);
 }
 
+/* Formatting the quantity cards and images */
 #pack-of-3, #pack-of-6, #pack-of-24 {
   display: inline-flex;
   flex-direction: column;
@@ -201,15 +205,18 @@ h4 {
   }
 }
 
+/* Formatting quantity cards on hover to give some interactivity */
 #pack-of-3:hover, #pack-of-6:hover, #pack-of-24:hover {
   box-shadow: black 0px 0px 5px;
   color: var(--main-font-color);
 }
 
+/* Formatting related products section to have Carlito */
 .related-products-section {
   font-family: var(--font-family);
 }
 
+/* Formatting related products section to have good layout */
 .related-products-container {
   display: flex;
   background-color: var(--main-font-color);
@@ -229,22 +236,16 @@ h4 {
   }
 }
 
+/* Formatting with Carlito */
 .limited-edition-product {
   font-family: var(--font-family);
 }
 
+/* Formatting with vars */
 .limited-edition-product-container {
-  display: flex;
   background-color: var(--main-font-color);
   border-radius: var(--med-rounded-corner);
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-  margin: 0 auto;
-  width: fit-content;
   box-shadow: var(--box-shadow-light);
-  /* border: 5px solid purple; */
 
   img {
     height: 210px;
@@ -252,6 +253,7 @@ h4 {
   }
 }
 
+/* Formatting with vars */
 .contact-form-container {
   font-family: var(--font-family);
 
@@ -279,6 +281,7 @@ h4 {
   }
 }
 
+/* Formatting scroll to top svg */
 .scroll-to-top i {
   font-size: 2.3rem;
   color: var(--accent-color);
@@ -289,16 +292,13 @@ h4 {
   transform: var(--transform-scale);
 }
 
-.footer-logo {
-  padding: 0rem;
-  width: fit-content;
-
-  img {
-    width: 100px;
-    height: auto;
-  }
+/* formatting footer logo */
+.footer-logo img{
+  width: 100px;
+  height: auto;
 }
 
+/* Formatting footer with carlito */
 .footer-content {
   font-family: var(--font-family);
 }
